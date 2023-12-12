@@ -14,7 +14,7 @@ import estilo from "/public/estilo.png";
 import gestion from "/public/gestion.png";
 import reduxNuevo from "/public/reduxNuevo.png";
 import criptomonedas from "/public/criptomonedas.png";
-import javascript from "/public/javascript.png";
+import javascript from "/public/proyecto.png";
 import gastos from "/public/gastos.png";
 
 const Skill = ({ obscure }) => {
