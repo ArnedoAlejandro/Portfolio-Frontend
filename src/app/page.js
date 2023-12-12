@@ -9,7 +9,7 @@ import AboutMe from "../../components/AboutMe";
 import Contact from "../../components/Contact";
 
 export default function Home() {
-  const [obscureMode, setObscureMode] = useState(false);
+  const [obscureMode, setObscureMode] = useState(true);
 
   const changeMode = () => {
     setObscureMode(!obscureMode);
