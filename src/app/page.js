@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Layout changeMode={changeMode} obscure={obscureMode} />
-      <div className="h-[4rem] max-md:h-[8rem]"></div>
+      <div className="h-[4rem] "></div>
 
       <main
         className={` w-full  h-auto ${

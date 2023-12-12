@@ -99,7 +99,7 @@ const Presentacion = ({ obscure }) => {
           </div>
         </span>
       </div>
-      <div className="w-1/2  max-lg:w-8/12 m-auto  ">
+      <div className="w-1/2  max-lg:w-8/12 m-auto max-md:mt-[4rem] ">
         <Image
           src={fondo}
           alt="Imagen presentacion"

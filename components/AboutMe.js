@@ -13,7 +13,7 @@ const AboutMe = ({ obscure }) => {
 
   return (
     <div
-      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg py-4 max-lg:mt-28 ${
+      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg py-4 max-lg:mt-28  max-md:mt-36${
         obscure
           ? "border-white shadow-lg shadow-white"
           : "border-gray-400 shadow-lg shadow-black"
