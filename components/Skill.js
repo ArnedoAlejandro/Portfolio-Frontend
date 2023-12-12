@@ -1,24 +1,21 @@
 import Image from "next/image";
-import React from "react";
-import almacen from "../public/almacen.png";
-
-import react from "../public/reactBlanc.png";
-
-import css from "../public/css.png";
-import java from "../public/js.png";
-import tailwind from "../public/tailwind.png";
-import html from "../public/html.png";
-import prismaWhite from "../public/prismaWhite.png";
 import Link from "next/link";
-import github from "../public/github.png";
-import mongo from "../public/mongo.png";
-import redux from "../public/redux.png";
-import estilo from "../public/estilo.png";
-import gestion from "../public/gestion.png";
-import reduxNuevo from "../public/reduxNuevo.png";
-import criptomonedas from "../public/criptomonedas.png";
-import javascript from "../public/javascript.png";
-import gastos from "../public/gastos.png";
+import almacen from "../public/almacen.png";
+import react from "../public/reactBlanc.png";
+import css from "/public/css.png";
+import java from "/public/js.png";
+import tailwind from "/public/tailwind.png";
+import html from "public/html.png";
+import prismaWhite from "/public/prismaWhite.png";
+import github from "/public/github.png";
+import mongo from "/public/mongo.png";
+import redux from "/public/redux.png";
+import estilo from "/public/estilo.png";
+import gestion from "/public/gestion.png";
+import reduxNuevo from "/public/reduxNuevo.png";
+import criptomonedas from "/public/criptomonedas.png";
+import javascript from "/public/javascript.png";
+import gastos from "/public/gastos.png";
 
 const Skill = ({ obscure }) => {
   return (
