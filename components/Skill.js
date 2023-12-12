@@ -23,7 +23,7 @@ const Skill = ({ obscure }) => {
       <div className=" text-center flex flex-col justify-center   ">
         <h3 className="max-md:text-2xl">Personal Projects</h3>
 
-        <div className="mt-24 grid grid-cols-3  gap-9  max-lg:grid-cols-2 max-md:grid-cols-1">
+        <div className="mt-24 grid grid-cols-3  gap-9  max-lg:grid-cols-1">
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
@@ -52,7 +52,7 @@ const Skill = ({ obscure }) => {
                   provides optimised and high-performance development.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>
@@ -156,7 +156,7 @@ const Skill = ({ obscure }) => {
                   data integrity.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>
@@ -252,7 +252,7 @@ const Skill = ({ obscure }) => {
                   control.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>
@@ -345,7 +345,7 @@ const Skill = ({ obscure }) => {
                   API communication.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>
@@ -450,7 +450,7 @@ const Skill = ({ obscure }) => {
                   interface design.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>
@@ -555,7 +555,7 @@ const Skill = ({ obscure }) => {
                   architecture.
                 </p>
 
-                <p className="invisible mt-6 font-bold underline decoration-2 max-md:visible">
+                <p className="invisible mt-6 font-bold underline decoration-2 max-lg:visible">
                   Click for more information
                 </p>
               </div>

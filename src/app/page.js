@@ -25,14 +25,14 @@ export default function Home() {
           obscureMode ? "fondoClaro" : "fondoOscuro text-white/90"
         }`}
       >
-        <div className="w-full m-auto  max-lg:w-11/12 max-md:w-full">
+        <div className="w-full m-auto  max-lg:w-full max-md:w-full">
           <div className=" w-full px-11 m-auto max-md:w-full max-md:px-3 ">
             <Presentacion obscure={obscureMode} />
           </div>
           <div className="">
             <AboutMe obscure={obscureMode} />
           </div>
-          <div className="px-14 max-lg:px-4">
+          <div className="px-14 max-lg:px-4 max-lg:w-10/12 m-auto max-md:w-full">
             <Skill obscure={obscureMode} />
           </div>
           <div
