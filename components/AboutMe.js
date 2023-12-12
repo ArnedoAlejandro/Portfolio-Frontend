@@ -13,16 +13,16 @@ const AboutMe = ({ obscure }) => {
 
   return (
     <div
-      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg py-4  ${
+      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg py-4 max-lg:mt-28 ${
         obscure
           ? "border-white shadow-lg shadow-white"
           : "border-gray-400 shadow-lg shadow-black"
       }`}
     >
-      <h3 className="text-center">About Me...</h3>
+      <h3 className="text-center max-md:text-2xl">About Me</h3>
 
       <div className="mt-10 w-full flex items-center h-auto max-lg:grid">
-        <div className=" w-5/12 h-auto flex  justify-center max-lg:w-6/12 m-auto max-md:w-8/12">
+        <div className=" w-5/12 h-auto flex  justify-center max-lg:w-5/12 m-auto max-md:w-8/12">
           {obscure ? (
             <Image src={frameNew} alt="img splash" className="" />
           ) : (

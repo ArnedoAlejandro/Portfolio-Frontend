@@ -32,27 +32,14 @@ const Presentacion = ({ obscure }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const handleDescarga = () => {
-    // Ruta relativa al archivo PDF en la carpeta pública
-    const pdfPath = "../public/curriculum.pdf";
-
-    // Crea un enlace temporal y simula un clic para iniciar la descarga
-    const link = document.createElement("a");
-    link.href = pdfPath;
-    link.download = "nombre-del-archivo.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section
       id="presentacion"
-      className="h-auto  flex  max-md:flex-col-reverse   max-md:h-auto"
+      className="h-auto  flex  max-lg:flex-col-reverse   max-md:h-auto"
     >
       <div
         id="presentacion"
-        className=" m-auto h-auto w-1/2  flex flex-col justify-center items-center max-md:w-full  max-md:text-center max-md:h-auto max-md:my-5"
+        className=" m-auto h-auto w-1/2  flex flex-col justify-center items-center max-lg:w-full  max-lg:text-center max-md:h-auto max-md:my-5"
       >
         <span className="h-auto w-auto ">
           <h1
@@ -63,14 +50,14 @@ const Presentacion = ({ obscure }) => {
             Arnedo Alejandro
           </h1>
           <h2
-            className={`h-10 sombreadoText mt-10 text-4xl font-bold max-lg:text-2xl ${
+            className={`h-10 sombreadoText mt-10 text-4xl font-bold max-lg:text-2xl  ${
               !obscure ? "text-white" : "text-black/70"
             }`}
           >
             {text}
           </h2>
 
-          <div className="mt-9 flex gap-9">
+          <div className="mt-9 flex gap-9 max-lg:justify-center">
             {" "}
             <Link
               target="_blank"
@@ -81,7 +68,7 @@ const Presentacion = ({ obscure }) => {
               <Image
                 src={obscure ? linkedin : social}
                 alt="linkedin"
-                className="w-11 h-auto "
+                className="w-11 h-auto max-md:w-9"
               />
             </Link>
             <Link
@@ -93,7 +80,7 @@ const Presentacion = ({ obscure }) => {
               <Image
                 src={obscure ? gitBlack : gitWhite}
                 alt="linkedin"
-                className="w-11 h-auto"
+                className="w-11 h-auto max-md:w-9"
               />
             </Link>
             <span className="h-auto w-auto  ">
@@ -105,14 +92,14 @@ const Presentacion = ({ obscure }) => {
                 <Image
                   src={obscure ? instagram : insta}
                   alt="linkedin"
-                  className="w-11 h-auto "
+                  className="w-11 h-auto max-md:w-9"
                 />
               </Link>
             </span>
           </div>
         </span>
       </div>
-      <div className="w-1/2  max-lg:w-11/12 m-auto  ">
+      <div className="w-1/2  max-lg:w-8/12 m-auto  ">
         <Image
           src={fondo}
           alt="Imagen presentacion"

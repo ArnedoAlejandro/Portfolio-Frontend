@@ -11,8 +11,8 @@ const Footer = ({ obscure }) => {
   return (
     <>
       {" "}
-      <div id="contact" className="footer mt-40  py-4 flex   ">
-        <div className="w-full flex justify-evenly items-start max-md:grid">
+      <div id="contact" className="footer mt-40  py-4 flex ">
+        <div className="w-full flex justify-evenly items-start max-lg:px-8 max-md:grid  max-md:px-1">
           <div className=" w-1/4  max-lg:w-full grid gap-9 py-7 text-white ">
             <p className="text-xl text-white font-semibold underline underline-offset-8">
               Nav
@@ -20,26 +20,26 @@ const Footer = ({ obscure }) => {
 
             <a
               href="#presentacion"
-              className="text-lg transition all duration-300 hover:text-gray-300"
+              className="text-lg transition all duration-300 hover:text-gray-300 max-md:text-md"
             >
               Presentation
             </a>
             <a
               href="#proyect"
-              className="text-lg transition all duration-300 hover:text-gray-300"
+              className="text-lg transition all duration-300 hover:text-gray-300 max-md:text-md"
             >
               Proyects
             </a>
 
             <a
               href="#education"
-              className="text-lg transition all duration-300 hover:text-gray-300"
+              className="text-lg transition all duration-300 hover:text-gray-300 max-md:text-md"
             >
               Education
             </a>
             <a
               href="#contact"
-              className="text-lg transition all duration-300 hover:text-gray-300"
+              className="text-lg transition all duration-300 hover:text-gray-300 max-md:text-md"
             >
               Contact
             </a>

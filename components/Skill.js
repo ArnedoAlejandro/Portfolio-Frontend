@@ -21,7 +21,7 @@ const Skill = ({ obscure }) => {
   return (
     <section id="proyect" className="w-full h-auto m-auto mt-24 max-md:w-full">
       <div className=" text-center flex flex-col justify-center   ">
-        <h3>Personal Projects</h3>
+        <h3 className="max-md:text-2xl">Personal Projects</h3>
 
         <div className="mt-24 grid grid-cols-3  gap-9  max-lg:grid-cols-2 max-md:grid-cols-1">
           <div
@@ -624,7 +624,7 @@ const Skill = ({ obscure }) => {
             </div>
           </div>
         </div>
-        <span className="w-auto mt-24 text-xl font-medium flex justify-center ">
+        <span className="w-auto mt-24 text-xl font-medium flex justify-center max-md:text-lg">
           <Link href="https://github.com/ArnedoAlejandro">
             <p className="h-10 w-auto m-auto flex gap-4 justify-center items-center   font-semibold px-4 py-6 bg-emerald-400  rounded-lg shadow-lg  shadow-black/30 text-white transition-all ease-linear duration-200 hover:bg-emerald-500 hover:shadow-none hover:text-gray-100 ">
               See more projects ...

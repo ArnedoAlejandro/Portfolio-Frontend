@@ -26,7 +26,9 @@ const Education = ({ obscure }) => {
       className="fondoAnimado h-auto mt-32 py-28 max-md:mt-16 "
     >
       {" "}
-      <h3 className="text-center ">Academic and skill institutions</h3>
+      <h3 className="text-center max-md:text-2xl max-md:p-8">
+        Academic and skill institutions
+      </h3>
       <div className="w-10/12 m-auto  max-md:px-4 max-lg:w-full ">
         <span className="w-full mt-24 m-auto flex  items-center  max-lg:gap-10 h-auto max-lg:grid max-lg:place-content-center max-md:gap-9">
           <div className="m-auto w-6/12    flex flex-col justify-center items-center   max-lg:w-full   max-md:justify-center">
