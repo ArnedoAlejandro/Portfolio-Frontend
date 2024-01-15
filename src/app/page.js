@@ -17,9 +17,9 @@ export default function Home() {
 
   return (
     <>
+      {" "}
       <Layout changeMode={changeMode} obscure={obscureMode} />
       <div className="h-[4rem] "></div>
-
       <main
         className={` w-full  h-auto ${
           obscureMode ? "fondoClaro" : "fondoOscuro text-white/90"

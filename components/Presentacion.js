@@ -1,10 +1,8 @@
 "useClient";
 import { useEffect, useState } from "react";
-import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import fondo from "../public/fondo.png";
-import descargasWhite from "../public/descargasWhite.png";
-import Link from "next/link";
 import social from "../public/social.png";
 import gitWhite from "../public/gitWhite.png";
 import insta from "../public/insta.png";
@@ -15,7 +13,7 @@ import linkedin from "../public/linkedin.png";
 
 const Presentacion = ({ obscure }) => {
   const [text, setText] = useState("");
-  const originalText = "Desarrollador Frontend";
+  const originalText = "Frontend developer";
   let index = 0;
 
   useEffect(() => {
@@ -104,7 +102,7 @@ const Presentacion = ({ obscure }) => {
           src={fondo}
           alt="Imagen presentacion"
           className="w-full h-auto"
-        />
+        />{" "}
       </div>
     </section>
   );

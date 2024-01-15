@@ -21,7 +21,9 @@ const Skill = ({ obscure }) => {
   return (
     <section id="proyect" className="w-full h-auto m-auto mt-24 max-md:w-full">
       <div className=" text-center flex flex-col justify-center   ">
-        <h3 className="max-md:text-2xl">Personal Projects</h3>
+        <h3 fade-up className="max-md:text-2xl">
+          Personal Projects
+        </h3>
 
         <div className="mt-24 grid grid-cols-3  gap-9  max-lg:grid-cols-1">
           <div

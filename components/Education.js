@@ -29,7 +29,10 @@ const Education = ({ obscure }) => {
       <h3 className="text-center max-md:text-2xl max-md:p-8">
         Academic and skill institutions
       </h3>
-      <div className="w-10/12 m-auto  max-md:px-4 max-lg:w-full ">
+      <div
+        animate-fade-up
+        className="w-10/12 m-auto  max-md:px-4 max-lg:w-full "
+      >
         <span className="w-full mt-24 m-auto flex  items-center  max-lg:gap-10 h-auto max-lg:grid max-lg:place-content-center max-md:gap-9">
           <div className="m-auto w-6/12    flex flex-col justify-center items-center   max-lg:w-full   max-md:justify-center">
             <div className="w-10/12 h-[500px]  flex flex-col  gap-14 shadow-md shadow-black/70 bg-black/50  px-9 py-4 rounded-lg  text-white max-md:h-auto max-md:w-full max-md:gap-9 max-md:px-5">
