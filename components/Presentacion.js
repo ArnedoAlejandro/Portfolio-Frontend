@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import fondo from "../public/fondo.png";
+import estudio from "../public/estudio.png";
 import social from "../public/social.png";
 import gitWhite from "../public/gitWhite.png";
 import insta from "../public/insta.png";
@@ -66,7 +66,7 @@ const Presentacion = ({ obscure }) => {
               <Image
                 src={obscure ? linkedin : social}
                 alt="linkedin"
-                className="w-11 h-auto max-md:w-9"
+                className="w-9 h-auto max-md:w-9"
               />
             </Link>
             <Link
@@ -78,7 +78,7 @@ const Presentacion = ({ obscure }) => {
               <Image
                 src={obscure ? gitBlack : gitWhite}
                 alt="linkedin"
-                className="w-11 h-auto max-md:w-9"
+                className="w-9 h-auto max-md:w-9"
               />
             </Link>
             <span className="h-auto w-auto  ">
@@ -90,7 +90,7 @@ const Presentacion = ({ obscure }) => {
                 <Image
                   src={obscure ? instagram : insta}
                   alt="linkedin"
-                  className="w-11 h-auto max-md:w-9"
+                  className="w-10 h-auto max-md:w-9"
                 />
               </Link>
             </span>
@@ -99,7 +99,7 @@ const Presentacion = ({ obscure }) => {
       </div>
       <div className="w-1/2  max-lg:w-8/12 m-auto max-md:mt-[4rem] ">
         <Image
-          src={fondo}
+          src={estudio}
           alt="Imagen presentacion"
           className="w-full h-auto"
         />{" "}
