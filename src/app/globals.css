@@ -91,7 +91,7 @@ h3{
   position: absolute;
   top: 0;
   left: 0;
-  transition: linear opacity 0.5s; /* Transición de opacidad para suavizar el efecto */
+  transition: linear opacity 0.1s; /* Transición de opacidad para suavizar el efecto */
 }
 
 .elemento-no-visible {

@@ -5,7 +5,7 @@ import react from "../public/reactBlanc.png";
 import css from "/public/css.png";
 import java from "/public/js.png";
 import tailwind from "/public/tailwind.png";
-import html from "public/html.png";
+import html from "/public/html.png";
 import prismaWhite from "/public/prismaWhite.png";
 import github from "/public/github.png";
 import mongo from "/public/mongo.png";
