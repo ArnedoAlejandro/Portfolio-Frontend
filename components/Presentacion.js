@@ -33,27 +33,27 @@ const Presentacion = ({ obscure }) => {
   return (
     <section
       id="presentacion"
-      className="h-auto  flex  max-lg:flex-col-reverse   max-md:h-auto"
+      className="h-auto   flex  max-lg:flex-col-reverse   max-md:h-auto"
     >
       <div
         id="presentacion"
-        className=" m-auto h-auto w-1/2  flex flex-col justify-center items-center max-lg:w-full  max-lg:text-center max-md:h-auto max-md:my-5"
+        className="fondoPatern m-auto h-auto w-1/2  flex flex-col justify-center items-center max-lg:w-full  max-lg:text-center max-md:h-auto max-md:my-5"
       >
         <span className="h-auto w-auto ">
           <h1
-            className={`sombreadoText text-6xl font-bold max-lg:text-4xl ${
-              !obscure ? "text-white" : "text-black/80"
+            className={` text-6xl font-bold max-lg:text-5xl max-md:text-3xl${
+              !obscure ? "text-white" : "text-black/90"
             }`}
           >
             Arnedo Alejandro
           </h1>
-          <h2
-            className={`h-10 sombreadoText mt-10 text-4xl font-bold max-lg:text-2xl  ${
+          <h5
+            className={`h-10   mt-10 text-4xl font-bold max-lg:text-4xl max-md:text-2xl  ${
               !obscure ? "text-white" : "text-black/70"
             }`}
           >
             {text}
-          </h2>
+          </h5>
 
           <div className="mt-9 flex gap-9 max-lg:justify-center">
             {" "}
@@ -101,7 +101,7 @@ const Presentacion = ({ obscure }) => {
         <Image
           src={estudio}
           alt="Imagen presentacion"
-          className="w-full h-auto"
+          className="w-11/12 h-auto m-auto max-lg:w-full "
         />{" "}
       </div>
     </section>

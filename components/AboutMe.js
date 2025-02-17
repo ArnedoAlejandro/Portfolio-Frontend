@@ -13,24 +13,47 @@ const AboutMe = ({ obscure }) => {
 
   return (
     <div
-      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg py-4 max-lg:mt-28  max-md:mt-36${
+      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg  max-lg:mt-28  max-md:mt-36${
         obscure
-          ? "border-white shadow-lg shadow-white"
-          : "border-gray-400 shadow-lg shadow-black"
+          ? " shadow-lg bg-white/60"
+          : " shadow-lg border-none bg-slate-800  "
       }`}
     >
-      <h3 className="text-center max-md:text-2xl">About Me</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        fill="#12FF32"
+      >
+        <path
+          d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z"
+          opacity=".4"
+        ></path>
+        <path
+          d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z"
+          opacity=".5"
+        ></path>
+        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
+      </svg>
 
-      <div className="mt-10 w-full flex items-center h-auto max-lg:grid">
+      <div className="p-2   w-full flex items-start h-auto max-lg:grid">
         <div className=" w-5/12 h-auto flex  justify-center max-lg:w-5/12 m-auto max-md:w-8/12">
           {obscure ? (
-            <Image src={frameNew} alt="img splash" className="" />
+            <Image
+              src={frameNew}
+              alt="img splash"
+              className="w-auto h-auto mt-[-50px]"
+            />
           ) : (
-            <Image src={frameW} alt="img splash" className=" p-8" />
+            <Image
+              src={frameW}
+              alt="img splash"
+              className="w-1/2 h-auto   mt-[-50px]"
+            />
           )}
         </div>
-        <div className="w-7/12 flex pb-7 flex-col justify-center   gap-9 max-lg:w-full">
-          <p className=" p-5 rounded-lg opacity-70">
+        <div className="w-7/12  flex pb-7 flex-col justify-center gap-3  max-lg:w-fullmax-md:gap-9">
+          <h3 className="text-start max-md:text-2xl">About Me</h3>
+          <p className="  rounded-lg opacity-70">
             I started doing a diploma in web development Full stack at the
             National Technological University acquiring knowledge in the
             languages of HTML, CSS, PHP and MYSQL, then I continued specializing
