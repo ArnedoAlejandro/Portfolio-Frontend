@@ -51,8 +51,10 @@ const AboutMe = ({ obscure }) => {
             />
           )}
         </div>
-        <div className="w-7/12  flex pb-7 flex-col justify-center gap-3  max-lg:w-fullmax-md:gap-9">
-          <h3 className="text-start max-md:text-2xl">About Me</h3>
+        <div className="w-7/12  flex pb-7 flex-col justify-center gap-3  max-lg:w-full max-md:gap-9">
+          <h3 className="text-start max-md:text-2xl max-md:text-center">
+            About Me
+          </h3>
           <p className="  rounded-lg opacity-70">
             I started doing a diploma in web development Full stack at the
             National Technological University acquiring knowledge in the

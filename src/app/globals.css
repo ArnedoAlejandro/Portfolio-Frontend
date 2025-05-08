@@ -121,7 +121,7 @@ h3{
   transition: none
 }
 
-@media screen and (max-width: 767) {
+@media screen and (max-width: 767px) {
   .contenedor {
     height: 680px;
     
@@ -192,7 +192,7 @@ background-size: cover;
 background:rgb(5, 184, 5)
 }
 .fondoFooter{
-  /* background-color: #E8E8E8; */
+
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%231ccc0a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2300aa13' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2317c509' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300a319' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2312be09' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23009c1d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230db708' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23029520' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2307b108' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23048f22' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2301aa07' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23078824' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
 background-attachment: static;
 background-size: cover;

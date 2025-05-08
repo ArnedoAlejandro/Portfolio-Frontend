@@ -41,7 +41,7 @@ const Presentacion = ({ obscure }) => {
       >
         <span className="h-auto w-auto ">
           <h1
-            className={` text-6xl font-bold max-lg:text-5xl max-md:text-3xl${
+            className={` text-6xl font-bold max-lg:text-5xl max-md:text-2xl${
               !obscure ? "text-white" : "text-black/90"
             }`}
           >
