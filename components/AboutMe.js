@@ -1,100 +1,151 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-
-import frameNew from "../public/frameNew.png";
-import frameW from "../public/frameW.png";
+import fotoPerfil from "../public/fotoPerfil.png";
 import descargasWhite from "../public/descargasWhite.png";
 import curriculum from "../download/curriculum.pdf";
 
-const AboutMe = ({ obscure }) => {
-  const [text, setText] = useState("");
-  const originalText = "Desarrollador Web";
-  let index = 0;
+export default function AboutMe({ obscure }) {
+  // Paleta controlada por modo
+  const bgCard = obscure ? "bg-white/70" : "bg-slate-900/70";
+  const textBase = obscure ? "text-slate-800" : "text-slate-100";
+  const textMuted = obscure ? "text-slate-600" : "text-slate-300";
+  const titleColor = obscure ? "text-slate-900" : "text-white";
+  const waveFrom = obscure ? "#3B82F6" : "#5563FF"; // azul
+  const waveTo = obscure ? "#7C3AED" : "#7C8BFF"; // indigo/violeta
 
   return (
-    <div
-      className={`w-11/12  m-auto h-auto mt-10 border-2 rounded-lg  max-lg:mt-28  max-md:mt-36${
-        obscure
-          ? " shadow-lg bg-white/60"
-          : " shadow-lg border-none bg-slate-800  "
-      }`}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1000 100"
-        fill="#12FF32"
+    <section className="w-full b" id="about">
+      <div
+        className={`relative mx-auto mt-10 w-full max-w-6xl rounded-3xl shadow-xl overflow-hidden ${bgCard} backdrop-blur-md max-md:rounded-none max-md:shadow-sm`}
       >
-        <path
-          d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z"
-          opacity=".4"
-        ></path>
-        <path
-          d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z"
-          opacity=".5"
-        ></path>
-        <path d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"></path>
-      </svg>
+        {/* Wave decorativa superior */}
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          className="absolute inset-x-0 -top-10 h-28 w-full"
+          viewBox="0 0 1000 100"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGrad" x1="0" x2="1">
+              <stop offset="0%" stopColor={waveFrom} stopOpacity="0.9" />
+              <stop offset="100%" stopColor={waveTo} stopOpacity="0.9" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z"
+            fill="url(#waveGrad)"
+            opacity=".35"
+          />
+          <path
+            d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z"
+            fill="url(#waveGrad)"
+            opacity=".5"
+          />
+          <path
+            d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"
+            fill="url(#waveGrad)"
+          />
+        </svg>
 
-      <div className="p-2   w-full flex items-start h-auto max-lg:grid">
-        <div className=" w-5/12 h-auto flex  justify-center max-lg:w-5/12 m-auto max-md:w-8/12">
-          {obscure ? (
-            <Image
-              src={frameNew}
-              alt="img splash"
-              className="w-auto h-auto mt-[-50px]"
-            />
-          ) : (
-            <Image
-              src={frameW}
-              alt="img splash"
-              className="w-1/2 h-auto   mt-[-50px]"
-            />
-          )}
-        </div>
-        <div className="w-7/12  flex pb-7 flex-col justify-center gap-3  max-lg:w-full max-md:gap-9">
-          <h3 className="text-start max-md:text-2xl max-md:text-center">
-            About Me
-          </h3>
-          <p className="  rounded-lg opacity-70">
-            I started doing a diploma in web development Full stack at the
-            National Technological University acquiring knowledge in the
-            languages of HTML, CSS, PHP and MYSQL, then I continued specializing
-            in the frontend area taking courses to internalize new knowledge in
-            the language of JAVASCRIPT knowing the essential bases for multiple
-            projects, then I continued my learning stage acquiring new knowledge
-            with the React.Js library where I have explored various technologies
-            in both the frontend and backend. My project experience includes the
-            advanced use of tools such as Next.js to optimize the construction
-            of web applications, MongoDB for efficient management of
-            unstructured data, and Express as a robust application framework. In
-            my experience I have used real-time technologies such as Socket.io,
-            and I have also expanded my skills with graphic design tools such as
-            Figma, allowing me to offer comprehensive and versatile solutions in
-            the field of technology.
-          </p>
+        {/* Contenido */}
+        <div className=" relative grid grid-cols-1 md:grid-cols-5 gap-8 p-6 md:p-8 lg:p-10">
+          {/* Imagen */}
+          <div className="md:col-span-2">
+            <div className="mx-auto w-full max-w-sm rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-lg  ">
+              <Image
+                src={fotoPerfil}
+                alt="Retrato profesional frente a portátil"
+                className="h-auto w-full object-cover"
+                priority
+              />
+            </div>
+          </div>
 
-          <a href={curriculum} download>
-            <button className="mt-4 w-full flex justify-center items-start ">
-              <span
-                className={`h-10 w-auto flex gap-2 justify-center items-center  text-black font-semibold px-4 py-6  ${
-                  !obscure
-                    ? "bg-emerald-400  rounded-lg shadow-md shadow-white text-white transition-all ease-linear duration-200 hover:bg-emerald-500 hover:shadow-none hover:text-gray-100 "
-                    : "bg-emerald-400  rounded-lg shadow-lg  shadow-black/30 text-white transition-all ease-linear duration-200 hover:bg-emerald-500 hover:shadow-none hover:text-gray-100"
+          {/* Texto */}
+          <div className="md:col-span-3">
+            <h2 className={`text-2xl md:text-3xl font-extrabold ${titleColor}`}>
+              About Me
+            </h2>
+
+            <p className={`mt-4 leading-7 ${textMuted} max-w-prose`}>
+              I completed a full-stack web development diploma at the National
+              Technological University, mastering HTML, CSS, PHP and MySQL. I
+              later specialized in frontend, deepening my knowledge of
+              JavaScript and React. I’ve built projects using Next.js to
+              optimize performance, MongoDB for unstructured data, and Express
+              for robust APIs. I also work with real-time tech like Socket.io
+              and design tools like Figma, offering comprehensive, reliable
+              solutions across the stack.
+            </p>
+
+            {/* CTA */}
+            <div className="mt-6  max-lg:mt-6 max-lg:m-auto max-lg:w-max">
+              <a href={curriculum} download>
+                <button
+                  type="button"
+                  className={`inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold shadow transition
+                    focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+                    ${
+                      obscure
+                        ? "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600"
+                        : "bg-indigo-500 text-white hover:bg-indigo-600 focus-visible:ring-indigo-400"
+                    }`}
+                  aria-label="Download Curriculum Vitae"
+                >
+                  Download CV
+                  <Image
+                    src={descargasWhite}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                  />
+                </button>
+              </a>
+            </div>
+
+            {/* Badges opcionales (toques de credibilidad) */}
+            <ul className="mt-5 flex flex-wrap gap-2  max-lg:justify-center ">
+              <li
+                className={`text-xs px-3 py-1 rounded-full ${
+                  obscure
+                    ? "bg-blue-50 text-blue-700"
+                    : "bg-white/10 text-white/90"
                 }`}
               >
-                Dowload Cv
-                <Image
-                  src={descargasWhite}
-                  alt="logo github"
-                  className="w-6  h-auto"
-                />
-              </span>
-            </button>
-          </a>
+                +4 years learning & building
+              </li>
+              <li
+                className={`text-xs px-3 py-1 rounded-full ${
+                  obscure
+                    ? "bg-blue-50 text-blue-700"
+                    : "bg-white/10 text-white/90"
+                }`}
+              >
+                React · Next.js · Node
+              </li>
+              <li
+                className={`text-xs px-3 py-1 rounded-full ${
+                  obscure
+                    ? "bg-blue-50 text-blue-700"
+                    : "bg-white/10 text-white/90"
+                }`}
+              >
+                MongoDB · Express · Socket.io
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default AboutMe;
+        {/* Suave “glow” al fondo */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(1200px 300px at 50% -10%, rgba(99,102,241,0.12), transparent 60%)",
+          }}
+        />
+      </div>
+    </section>
+  );
+}

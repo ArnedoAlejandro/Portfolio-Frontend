@@ -63,7 +63,6 @@ const Footer = ({ obscure }) => {
             <Link
               target="_blank"
               href={"https://github.com/ArnedoAlejandro"}
-              blank
               className={`py-2 flex items-center text-white gap-4 text-lg`}
             >
               <Image src={gitWhite} alt="linkedin" className="w-7 h-auto" />

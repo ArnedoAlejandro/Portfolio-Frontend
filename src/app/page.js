@@ -7,6 +7,8 @@ import Education from "../../components/Education";
 import Footer from "../../components/Footer";
 import AboutMe from "../../components/AboutMe";
 import Contact from "../../components/Contact";
+import Scroll from "../../components/Scroll";
+import ScrollIndicator from "../../components/ScrollIndicator";
 
 export default function Home() {
   const [obscureMode, setObscureMode] = useState(true);
@@ -18,6 +20,7 @@ export default function Home() {
   return (
     <>
       {" "}
+      <Scroll />
       <Layout changeMode={changeMode} obscure={obscureMode} />
       <div className="h-[4rem] "></div>
       <main
@@ -29,6 +32,7 @@ export default function Home() {
           <div className=" w-full px-11 m-auto max-md:w-full max-md:px-3 ">
             <Presentacion obscure={obscureMode} />
           </div>
+          <ScrollIndicator targetId="about" />
           <div className="">
             <AboutMe obscure={obscureMode} />
           </div>

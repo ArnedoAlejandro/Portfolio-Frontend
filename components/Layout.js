@@ -37,7 +37,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                 role="menuitem"
                 aria-haspopup="false"
                 className="invisible flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8 max-lg:visible"
-                href="javascript:void(0)"
+                // href="javascript:void(0)"
               >
                 {!obscure ? (
                   <svg
