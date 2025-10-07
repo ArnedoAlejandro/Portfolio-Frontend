@@ -14,7 +14,6 @@ import express from "/public/express.png";
 import nexttt from "/public/nexttt.png";
 import capacitacion from "/public/capacitacion.png";
 import estilo from "/public/estilo.png";
-import gestion from "/public/gestion.png";
 import reduxNuevo from "/public/reduxNuevo.png";
 import criptomonedas from "/public/criptomonedas.png";
 import javascript from "/public/proyecto.png";
@@ -23,13 +22,16 @@ import optica from "/public/optica.png";
 
 const Skill = ({ obscure }) => {
   return (
-    <section id="proyect" className="w-full h-auto m-auto mt-24 max-lg:w-full ">
+    <section
+      id="proyect"
+      className="w-full max-w-6xl  h-auto m-auto mt-24 max-lg:w-full "
+    >
       <div className=" text-center flex flex-col justify-center   ">
         <h3 fade-up className="max-md:text-2xl">
           Personal Projects
         </h3>
 
-        <div className="mt-24 grid grid-cols-3  gap-9  max-lg:grid-cols-1">
+        <div className="mt-24 grid grid-cols-2  gap-9  max-lg:grid-cols-1">
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
