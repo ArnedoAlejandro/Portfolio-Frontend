@@ -36,7 +36,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                 onClick={changeMode}
                 role="menuitem"
                 aria-haspopup="false"
-                className="invisible flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8 max-lg:visible"
+                className="invisible flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8 max-lg:visible"
                 // href="javascript:void(0)"
               >
                 {!obscure ? (
@@ -113,7 +113,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-blue-600 hover:font-bold focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="#presentacion"
                 >
                   <span>Presentation</span>
@@ -124,7 +124,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-blue-600 hover:font-bold focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="#proyect"
                 >
                   <span>Proyects</span>
@@ -134,7 +134,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-blue-600 hover:font-bold focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="#education"
                 >
                   <span>Education</span>
@@ -144,7 +144,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-blue-600 hover:font-bold focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="#contact"
                 >
                   <span>Contact</span>
@@ -155,7 +155,7 @@ export default function NavbarBasicPreview({ changeMode, obscure }) {
                   onClick={changeMode}
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-blue-600 hover:font-bold focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="javascript:void(0)"
                 >
                   {!obscure ? (

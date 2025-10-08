@@ -24,28 +24,42 @@ const Skill = ({ obscure }) => {
   return (
     <section
       id="proyect"
-      className="w-full max-w-6xl  h-auto m-auto mt-24 max-lg:w-full "
+      className=" w-8/12  h-auto m-auto mt-24 max-lg:w-full "
     >
-      <div className=" text-center flex flex-col justify-center   ">
-        <h3 fade-up className="max-md:text-2xl">
-          Personal Projects
-        </h3>
-
+      <div className="mt-28 text-center flex flex-col justify-center   ">
+        <header className="mb-10 text-center md:mb-14">
+          <h2
+            id="education-title"
+            className="text-2xl font-extrabold tracking-tight md:text-4xl"
+          >
+            Personal <span className="text-blue-600">proyects</span>
+          </h2>
+          <p className="mx-auto mt-3 text-base md:text-xl lg:text-2xl text-slate-600">
+            Projects completed using various stacks and technologies.
+          </p>
+        </header>
         <div className="mt-24 grid grid-cols-2  gap-9  max-lg:grid-cols-1">
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
-            <div className="elemento-visible max-md:h-auto ">
-              <figure className="w-full shadow-md rounded-t-lg  h-[250px] max-md:h-[170px]">
+            <div className="elemento-visible ">
+              <figure className="relative w-full overflow-hidden rounded-t-lg aspect-[21/9] max-md:aspect-[16/9] shadow-md">
                 <Image
                   src={capacitacion}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Sistema de Capacitación Virtual HST"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
+                  placeholder="blur" // si tu imagen tiene blurDataURL
+                  priority={false} // ponelo en true si es el hero principal
                 />
+                {/* Overlay sutil para mejorar contraste del texto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </figure>
               <div className="p-6 max-md:p-4 max-md:mt-4 rounded-lg opacity-90 transition-all hover:opacity-100">
                 <header className="mb-4 border-b border-gray-200 pb-2">
@@ -152,17 +166,22 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible ">
-              <figure className="w-full shadow-md rounded-t-lg  h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg aspect-[21/9] max-md:aspect-[16/9] shadow-md">
                 <Image
                   src={optica}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Card image"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
+                  priority={false}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </figure>
               <div className="p-6 max-md:p-3 max-md:mt-4 opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
@@ -260,18 +279,24 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible">
-              <figure className="w-full shadow-md rounded-t-lg h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg h-[250px] max-md:h-[170px] shadow-md">
                 <Image
                   src={almacen}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Imagen del proyecto Almacén"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
                 />
+                {/* Overlay opcional si querés mejorar contraste de textos */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
               </figure>
+
               <div className="p-6 max-md:p-3 max-md:mt-4  opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
                   <h4 className="text-2xl font-semibold ">Food App</h4>
@@ -365,18 +390,24 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible ">
-              <figure className="w-full shadow-md rounded-t-lg  h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg h-[250px] max-md:h-[170px] shadow-md">
                 <Image
                   src={gastos}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Imagen del proyecto Almacén"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
                 />
+                {/* Overlay opcional si querés mejorar contraste de textos */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
               </figure>
+
               <div className="p-6 max-md:p-3 max-md:mt-4 opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
                   <h4 className="text-2xl font-semibold ">Budget management</h4>
@@ -462,18 +493,24 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible ">
-              <figure className="w-full shadow-md rounded-t-lg  h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg h-[250px] max-md:h-[170px] shadow-md">
                 <Image
                   src={javascript}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Imagen del proyecto Almacén"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
                 />
+                {/* Overlay opcional si querés mejorar contraste de textos */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
               </figure>
+
               <div className="p-6 max-md:p-3 max-md:mt-4  opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
                   <h4 className="text-2xl font-semibold ">Expense manager</h4>
@@ -556,18 +593,24 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible ">
-              <figure className="w-full shadow-md rounded-t-lg h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg h-[250px] max-md:h-[170px] shadow-md">
                 <Image
                   src={reduxNuevo}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Imagen del proyecto Almacén"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
                 />
+                {/* Overlay opcional si querés mejorar contraste de textos */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
               </figure>
+
               <div className="p-6 max-md:p-3 max-md:mt-4  opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
                   <h4 className="text-2xl font-semibold ">Proyect CRUD</h4>
@@ -662,18 +705,24 @@ const Skill = ({ obscure }) => {
           <div
             className={` contenedor shadow-md shadow-gray-400 rounded-md ${
               obscure
-                ? "bg-slate-50 text-gray-900"
-                : "bg-slate-800 text-white  shadow-black/20 shadow-lg "
+                ? "bg-white/70 text-slate-800"
+                : "bg-slate-900/70 text-slate-300   "
             }   `}
           >
             <div className="elemento-visible ">
-              <figure className="w-full shadow-md rounded-t-lg  h-[250px] max-md:h-[170px]">
+              <figure className="relative w-full overflow-hidden rounded-t-lg h-[250px] max-md:h-[170px] shadow-md">
                 <Image
                   src={criptomonedas}
-                  alt="card image"
-                  className="w-full h-full object-fill "
+                  alt="Imagen del proyecto Almacén"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 900px, (min-width: 768px) 80vw, 100vw"
+                  quality={85}
                 />
+                {/* Overlay opcional si querés mejorar contraste de textos */}
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" /> */}
               </figure>
+
               <div className="p-6 max-md:p-3 max-md:mt-4  opacity-80">
                 <header className="mb-4 border-b border-gray-200 pb-2">
                   <h4 className="text-2xl font-semibold ">Patient manager</h4>

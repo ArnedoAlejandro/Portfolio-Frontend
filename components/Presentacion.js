@@ -49,7 +49,7 @@ export default function Presentacion({ obscure = false }) {
   const ring = obscure ? "ring-[#3B82F6]/20" : "ring-white/20";
 
   return (
-    <section id="presentacion" className="relative overflow-hidden">
+    <section id="presentacion" className="relative overflow-hidden ">
       {/* fondo con gradiente sutil */}
       <div
         className="absolute -z-10 inset-0 bg-gradient-to-br from-[#0ea5e9]/10 via-[#6366F1]/10 to-transparent"

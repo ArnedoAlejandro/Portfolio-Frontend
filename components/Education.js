@@ -20,100 +20,158 @@ import figma from "../public/figma.png";
 import boostrarp from "../public/bootstrap.png";
 
 const Education = ({ obscure }) => {
+  const eduItems = [
+    { src: colegio, alt: "Institute", label: "Private Technical Institute" },
+    { src: uncnuevo, alt: "UNC", label: "National University of Córdoba" },
+    { src: utn, alt: "UTN", label: "National Technological University" },
+    { src: udemy, alt: "Udemy", label: "Udemy" },
+  ];
+
+  const skills = [
+    { src: html, label: "HTML5" },
+    { src: nexttt, label: "Next.js" },
+    { src: tailwind, label: "Tailwind CSS" },
+    { src: css, label: "CSS3" },
+    { src: zustandd, label: "Zustand" },
+    { src: boostrarp, label: "Bootstrap", extra: "bg-white rounded-md p-1" },
+    { src: js, label: "JavaScript" },
+    { src: mongo, label: "MongoDB" },
+    { src: figma, label: "Figma", size: "h-12 w-12" },
+    { src: reactBlanc, label: "React" },
+    { src: mysql, label: "MySQL" },
+    { src: git, label: "Git" },
+  ];
+
   return (
     <div
       id="education"
       className="fondoAnimado h-auto mt-32 py-28 max-md:mt-16 "
     >
       {" "}
-      <h3 className="text-center max-md:text-2xl max-md:p-8">
-        Academic and skill institutions
-      </h3>
-      <div className="w-10/12 m-auto  max-md:px-4 max-lg:w-full ">
-        <span className="w-full mt-24 m-auto flex  items-center  max-lg:gap-10 h-auto max-lg:grid max-lg:place-content-center max-md:gap-9">
-          <div className="m-auto w-6/12    flex flex-col justify-center items-center   max-lg:w-full   max-md:justify-center">
-            <div className="w-10/12 h-[500px]  flex flex-col  gap-14 shadow-md shadow-black/70 bg-black/50  px-9 py-4 rounded-lg  text-white max-md:h-auto max-md:w-full max-md:gap-9 max-md:px-5">
-              <p className="  text-center text-xl font-semibold ">Education</p>
-              <span className="flex gap-5 items-center ">
-                <span className="w-14 h-auto max-md:w-12">
-                  <Image alt="" src={colegio} />
-                </span>
-                <p className="text-lg font-normal max-md:text-base">
-                  Private Technical Institute
-                </p>
-              </span>
-              <span className="flex gap-5 items-center ">
-                <span className="w-14 h-auto">
-                  <Image alt="" src={uncnuevo} />
-                </span>
-                <p className="text-lg font-normal max-md:text-base">
-                  National University of Córdoba
-                </p>
-              </span>
-              <span className="flex gap-5 items-center">
-                <span className="w-14 h-auto max-md:w-12">
-                  <Image
-                    alt=""
-                    src={utn}
-                    className={`flex gap-5 items-center bg-none ${
-                      !obscure && "bg-white rounded-lg "
-                    }`}
-                  />
-                </span>
-                <p className="text-lg font-normal max-md:text-base ">
-                  National Technological University
-                </p>
-              </span>
-              <span className="flex gap-5 items-center">
-                <span className="w-12 h-auto max-md:w-12">
-                  <Image alt="" src={udemy} className="bg-white rounded-xl" />
-                </span>
-                <p className="text-lg font-normal max-md:text-base">Udemy</p>
-              </span>
+      <header className="mb-10 text-center md:mb-14">
+        <h2
+          id="education-title"
+          className="text-2xl font-extrabold tracking-tight md:text-4xl"
+        >
+          Academic and <span className="text-blue-600">skill</span> institutions
+        </h2>
+        <p className="mx-auto mt-3 text-lg md:text-xl lg:text-2xl text-slate-600">
+          Training and tools I use every day to create quality products.
+        </p>
+      </header>
+      <div className="w-7/12 m-auto  max-md:px-4 max-lg:w-full ">
+        <span className="w-full mt-24 m-auto flex gap-8  items-center  max-lg:gap-10 h-auto max-lg:grid max-lg:place-content-center max-md:gap-9">
+          <article
+            aria-labelledby="edu-title"
+            className={`
+    flex flex-col justify-between
+    w-10/12 max-w-3xl m-auto
+    rounded-2xl p-6 md:p-8
+    shadow-xl border
+    h-[530px]   max-md:h-auto            /* 🔹 asegura misma altura */
+    ${
+      obscure
+        ? "bg-slate-800/70 text-slate-50 border-white/10"
+        : "bg-slate-700/60 text-white border-white/20"
+    }
+    backdrop-blur relative overflow-hidden
+  `}
+          >
+            {/* halo decorativo */}
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-400/20 blur-2xl" />
+
+            <h3
+              id="edu-title"
+              className="text-center text-2xl  font-semibold max-md:text-lg"
+            >
+              Education
+            </h3>
+
+            <ul className="space-y-6 md:space-y-7 ">
+              {eduItems.map((it, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-10 md:gap-5 rounded-xl p-2 transition-all "
+                >
+                  <span className="relative h-12 w-12 md:h-12 md:w-12 shrink-0 overflow-hidden rounded-xl  ">
+                    <Image
+                      src={it.src}
+                      alt={it.alt}
+                      fill
+                      className={`object-contain ${
+                        it.alt === "Udemy" ? "bg-white p-1.5 rounded-xl" : ""
+                      }`}
+                      sizes="48px"
+                      priority={false}
+                    />
+                  </span>
+                  <p className="text-lg  leading-snug max-md:text-base">
+                    {it.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article
+            aria-labelledby="skills-title"
+            className={`
+    flex flex-col
+    w-10/12 max-w-3xl m-auto
+    rounded-2xl p-6 md:p-8
+    shadow-xl border h-[530px] max-md:h-auto        /* 🔹 asegura misma altura */
+    ${
+      obscure
+        ? "bg-slate-800/70 text-slate-50 border-white/10"
+        : "bg-slate-700/60 text-white border-white/20"
+    }
+    backdrop-blur relative overflow-hidden
+  `}
+          >
+            {/* halo decorativo */}
+            <div className="pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-emerald-400/20 blur-2xl" />
+
+            <h3
+              id="skills-title"
+              className="text-center text-2xl  font-semibold max-md:text-lg"
+            >
+              Technical skills
+            </h3>
+
+            {/* grid 4 cols fijo (colapsa a 2 en móviles para no aplastar) */}
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 place-items-stretch flex-1">
+              {skills.map((it, i) => (
+                <div
+                  key={i}
+                  className="
+          group rounded-xl  
+          p-3 flex flex-col items-center justify-center gap-2
+          transition-all hover:bg-white/10 hover:shadow-lg
+          focus-within:ring-2 
+        "
+                  title={it.label}
+                  aria-label={it.label}
+                >
+                  {/* Caja de imagen consistente: cuadrada, responsive y sin deformar */}
+                  <span className="relative aspect-square w-32 md:w-20">
+                    <Image
+                      src={it.src}
+                      alt={it.label}
+                      fill
+                      className={`object-contain ${it.extra ?? ""}`}
+                      sizes="(min-width: 768px) 70px, 50px"
+                      priority={false}
+                    />
+                  </span>
+
+                  {/* Texto centrado y compacto (evita saltos) */}
+                  <span className="text-[11px] md:text-xs font-medium opacity-80 group-hover:opacity-100 text-center line-clamp-1">
+                    {it.label}
+                  </span>
+                </div>
+              ))}
             </div>
-          </div>
-          <div className=" w-6/12   flex flex-col   gap-12 max-lg:w-full    max-md:m-auto">
-            {/*  */}
-            <div className="w-10/12 h-[500px] flex flex-col    gap-10 shadow-lg shadow-black/70 bg-black/60 px-9 py-4 rounded-lg  text-white m-auto max-md:h-auto max-md:w-full">
-              <p className=" text-center text-xl font-semibold ">
-                Technical skills
-              </p>
-              <div className="grid grid-cols-3  place-items-center gap-8">
-                <Image src={html} alt="" className="w-14 h-auto max-md:w-11" />
-                <Image
-                  src={nexttt}
-                  alt=""
-                  className="w-14 h-auto max-md:w-11"
-                />
-                <Image
-                  src={tailwind}
-                  alt=""
-                  className="w-14 h-auto max-md:w-11"
-                />
-                <Image src={css} alt="" className="w-14 h-auto max-md:w-11" />
-                <Image
-                  src={zustandd}
-                  alt=""
-                  className="w-18 h-auto max-md:w-20"
-                />
-                <Image
-                  src={boostrarp}
-                  alt=""
-                  className="w-14 h-auto bg-white rounded-xl max-md:w-11"
-                />
-                <Image src={js} alt="" className="w-14 h-auto max-md:w-11" />
-                <Image src={mongo} alt="" className="w-14 h-auto max-md:w-11" />
-                <Image src={figma} alt="" className="w-16 h-auto max-md:w-12" />
-                <Image
-                  src={reactBlanc}
-                  alt=""
-                  className="w-14 h-auto max-md:w-11"
-                />
-                <Image src={mysql} alt="" className="w-14 h-auto max-md:w-11" />
-                <Image src={git} alt="" className="w-14 h-auto max-md:w-11" />
-              </div>
-            </div>
-          </div>
+          </article>
         </span>
       </div>
       <div className="mt-32"></div>
