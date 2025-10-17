@@ -50,8 +50,8 @@ export default function AboutMe({ obscure }) {
         {/* Contenido */}
         <div className=" relative grid grid-cols-1 md:grid-cols-5 gap-8 p-6 md:p-8 lg:p-10">
           {/* Imagen */}
-          <div className="md:col-span-2">
-            <div className="mx-auto w-full max-w-sm rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-lg  ">
+          <div className="md:col-span-2 flex items-center">
+            <div className=" mx-auto w-full max-w-sm rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-lg  ">
               <Image
                 src={fotoPerfil}
                 alt="Retrato profesional frente a portátil"
@@ -68,14 +68,18 @@ export default function AboutMe({ obscure }) {
             </h2>
 
             <p className={`mt-4 leading-7 ${textMuted} max-w-prose`}>
-              I completed a full-stack web development diploma at the National
-              Technological University, mastering HTML, CSS, PHP and MySQL. I
-              later specialized in frontend, deepening my knowledge of
-              JavaScript and React. I’ve built projects using Next.js to
-              optimize performance, MongoDB for unstructured data, and Express
-              for robust APIs. I also work with real-time tech like Socket.io
-              and design tools like Figma, offering comprehensive, reliable
-              solutions across the stack.
+              I obtained my diploma in Full-Stack Web Development at the
+              National Technological University, where I acquired a solid
+              foundation in HTML, CSS, PHP, and MySQL. I then specialized in
+              frontend development, honing my skills in JavaScript, React, and
+              Next.js to create fast, accessible, and optimized interfaces. I
+              work with Tailwind CSS, React Query, and Socket.IO, applying SOLID
+              and Clean Architecture principles to develop reusable and scalable
+              components. As a freelancer, I have participated in multiple
+              projects designing intuitive interfaces, optimizing performance,
+              and ensuring smooth user experiences. I use Figma, Postman, and
+              agile methodologies to deliver reliable, results-oriented
+              solutions.
             </p>
 
             {/* CTA */}

@@ -6,9 +6,9 @@ import Skill from "../../components/Skill";
 import Education from "../../components/Education";
 import Footer from "../../components/Footer";
 import AboutMe from "../../components/AboutMe";
-import Contact from "../../components/Contact";
 import Scroll from "../../components/Scroll";
 import ScrollIndicator from "../../components/ScrollIndicator";
+import ContactForm from "../../components/ContactForm";
 
 export default function Home() {
   const [obscureMode, setObscureMode] = useState(true);
@@ -45,11 +45,9 @@ export default function Home() {
             } `}
           >
             <Education obscure={obscureMode} />
-
-            <Contact />
-
-            <Footer obscure={obscureMode} />
           </div>
+          <ContactForm obscure={obscureMode} />
+          <Footer obscure={obscureMode} />
         </div>
       </main>
     </>

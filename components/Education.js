@@ -45,7 +45,7 @@ const Education = ({ obscure }) => {
   return (
     <div
       id="education"
-      className="fondoAnimado h-auto mt-32 py-28 max-md:mt-16 "
+      className="fondoAnimado h-auto mt-32 py-28 max-md:mt-16 max-md:p-2"
     >
       {" "}
       <header className="mb-10 text-center md:mb-14">
@@ -68,7 +68,7 @@ const Education = ({ obscure }) => {
     w-10/12 max-w-3xl m-auto
     rounded-2xl p-6 md:p-8
     shadow-xl border
-    h-[530px]   max-md:h-auto            /* 🔹 asegura misma altura */
+    h-[530px]   max-md:h-auto  max-md:w-full            
     ${
       obscure
         ? "bg-slate-800/70 text-slate-50 border-white/10"
@@ -91,7 +91,7 @@ const Education = ({ obscure }) => {
               {eduItems.map((it, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center gap-10 md:gap-5 rounded-xl p-2 transition-all "
+                  className="flex items-center gap-10 md:gap-5 rounded-xl p-2 transition-all max-md:gap-3"
                 >
                   <span className="relative h-12 w-12 md:h-12 md:w-12 shrink-0 overflow-hidden rounded-xl  ">
                     <Image
@@ -105,7 +105,7 @@ const Education = ({ obscure }) => {
                       priority={false}
                     />
                   </span>
-                  <p className="text-lg  leading-snug max-md:text-base">
+                  <p className="text-lg  leading-snug max-md:text-sm">
                     {it.label}
                   </p>
                 </li>
@@ -119,7 +119,7 @@ const Education = ({ obscure }) => {
     flex flex-col
     w-10/12 max-w-3xl m-auto
     rounded-2xl p-6 md:p-8
-    shadow-xl border h-[530px] max-md:h-auto        /* 🔹 asegura misma altura */
+    shadow-xl border h-[530px] max-md:h-auto  max-md:w-full     
     ${
       obscure
         ? "bg-slate-800/70 text-slate-50 border-white/10"
@@ -139,7 +139,7 @@ const Education = ({ obscure }) => {
             </h3>
 
             {/* grid 4 cols fijo (colapsa a 2 en móviles para no aplastar) */}
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 place-items-stretch flex-1">
+            <div className="mt-6 grid grid-cols-3 md:grid-cols-4 gap-4 sm:gap-5 place-items-stretch flex-1">
               {skills.map((it, i) => (
                 <div
                   key={i}
@@ -153,13 +153,13 @@ const Education = ({ obscure }) => {
                   aria-label={it.label}
                 >
                   {/* Caja de imagen consistente: cuadrada, responsive y sin deformar */}
-                  <span className="relative aspect-square w-32 md:w-20">
+                  <span className="relative aspect-square w-14 md:w-20">
                     <Image
                       src={it.src}
                       alt={it.label}
                       fill
                       className={`object-contain ${it.extra ?? ""}`}
-                      sizes="(min-width: 768px) 70px, 50px"
+                      sizes="(min-width: 768px) 128px, 80px"
                       priority={false}
                     />
                   </span>
