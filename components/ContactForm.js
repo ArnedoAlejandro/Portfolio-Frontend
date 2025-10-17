@@ -35,7 +35,7 @@ export default function ContactSection({ obscure }) {
   };
 
   const textBase = obscure ? "text-slate-900" : "text-white/90";
-  const textMuted = obscure ? "text-slate-500" : "text-white/90";
+  const textMuted = obscure ? "text-slate-500" : "text-white/80";
   const cardBg = obscure ? "bg-white/90" : "bg-white";
   const inputBg = obscure ? "bg-white" : "bg-white";
   const shadow = "shadow-[0_10px_40px_-15px_rgba(25,25,84,0.25)]";
