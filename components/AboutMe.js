@@ -70,7 +70,7 @@ export default function AboutMe({ obscure }) {
             <p className={`mt-4 leading-7 ${textMuted} max-w-prose`}>
               I obtained my diploma in Full-Stack Web Development at the
               National Technological University, where I acquired a solid
-              foundation in HTML, CSS, PHP, and MySQL. I then specialized in
+              foundation in HTML, CSS, JavaScript, PHP, and MySQL. I then specialized in
               frontend development, honing my skills in JavaScript, React, and
               Next.js to create fast, accessible, and optimized interfaces. I
               work with Tailwind CSS, React Query, and Socket.IO, applying SOLID
