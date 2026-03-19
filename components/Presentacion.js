@@ -64,13 +64,13 @@ export default function Presentacion({ obscure = false }) {
             className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${badgeBg} ring-1 ${ring} text-sm ${textSecondary} max-md:m-auto`}
           >
             <span className="inline-block h-2 w-2 rounded-full bg-[#3B82F6] " />
-            Disponible para proyectos
+            Open to work · Disponible
           </span>
 
           <h1
             className={`mt-6 text-5xl font-extrabold tracking-tight ${textPrimary} max-lg:mt-4 max-lg:text-4xl max-md:text-3xl`}
           >
-            Arnedo Alejandro
+            Alejandro Arnedo
           </h1>
 
           <h2
@@ -83,9 +83,9 @@ export default function Presentacion({ obscure = false }) {
           <p
             className={`mt-7 max-w-xl leading-relaxed ${textSecondary} max-md:mt-5`}
           >
-            I develop clean, accessible, and high-performance interfaces. I
-            focus on a solid user experience and professional delivery, working
-            with best practices and clear communication.
+            Frontend Developer focused on React & Next.js. I build fast,
+            accessible interfaces — from pixel-perfect UI to seamless API
+            integration — with clean code and clear communication.
           </p>
 
           {/* CTA + Social */}
@@ -112,7 +112,7 @@ export default function Presentacion({ obscure = false }) {
                 />
               </Link>
               <Link
-                href="https://github.com/"
+                href="https://github.com/ArnedoAlejandro"
                 target="_blank"
                 aria-label="GitHub"
                 className="group"

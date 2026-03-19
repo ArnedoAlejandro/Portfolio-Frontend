@@ -64,22 +64,17 @@ export default function AboutMe({ obscure }) {
           {/* Texto */}
           <div className="md:col-span-3">
             <h2 className={`text-2xl md:text-3xl font-extrabold ${titleColor}`}>
-              About Me
+              Who I am
             </h2>
 
             <p className={`mt-4 leading-7 ${textMuted} max-w-prose`}>
-              I obtained my diploma in Full-Stack Web Development at the
-              National Technological University, where I acquired a solid
-              foundation in HTML, CSS, PHP, and MySQL. I then specialized in
-              frontend development, honing my skills in JavaScript, React, and
-              Next.js to create fast, accessible, and optimized interfaces. I
-              work with Tailwind CSS, React Query, and Socket.IO, applying SOLID
-              and Clean Architecture principles to develop reusable and scalable
-              components. As a freelancer, I have participated in multiple
-              projects designing intuitive interfaces, optimizing performance,
-              and ensuring smooth user experiences. I use Figma, Postman, and
-              agile methodologies to deliver reliable, results-oriented
-              solutions.
+              Frontend Developer specialized in React & Next.js, graduated from
+              the National Technological University. I build fast, accessible,
+              and scalable interfaces — from component architecture to API
+              integration — applying SOLID principles and Clean Architecture in
+              every project. I have worked as a freelancer delivering end-to-end
+              solutions for real clients, using Tailwind CSS, React Query,
+              Socket.IO, and Figma as part of my daily workflow.
             </p>
 
             {/* CTA */}
@@ -110,31 +105,19 @@ export default function AboutMe({ obscure }) {
             {/* Badges opcionales (toques de credibilidad) */}
             <ul className="mt-5 flex flex-wrap gap-2  max-lg:justify-center ">
               <li
-                className={`text-xs px-3 py-1 rounded-full ${
-                  obscure
-                    ? "bg-blue-50 text-blue-700"
-                    : "bg-white/10 text-white/90"
-                }`}
+                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
               >
                 +4 years learning & building
               </li>
               <li
-                className={`text-xs px-3 py-1 rounded-full ${
-                  obscure
-                    ? "bg-blue-50 text-blue-700"
-                    : "bg-white/10 text-white/90"
-                }`}
+                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
               >
-                React · Next.js · Node
+                React · Next.js · Tailwind
               </li>
               <li
-                className={`text-xs px-3 py-1 rounded-full ${
-                  obscure
-                    ? "bg-blue-50 text-blue-700"
-                    : "bg-white/10 text-white/90"
-                }`}
+                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
               >
-                MongoDB · Express · Socket.io
+                Freelance · Real clients
               </li>
             </ul>
           </div>

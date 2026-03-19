@@ -134,7 +134,7 @@ export default function ContactSection({ obscure }) {
                   <input
                     type="email"
                     name="email"
-                    placeholder="tucorreo@dominio.com"
+                    placeholder="yourmail@gmail.com"
                     value={form.email}
                     onChange={handleChange}
                     required
