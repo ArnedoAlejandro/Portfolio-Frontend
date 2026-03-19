@@ -103,6 +103,7 @@ export default function AboutMe({ obscure }) {
             </div>
 
             {/* Badges opcionales (toques de credibilidad) */}
+
             <ul className="mt-5 flex flex-wrap gap-2  max-lg:justify-center ">
               <li
                 className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
