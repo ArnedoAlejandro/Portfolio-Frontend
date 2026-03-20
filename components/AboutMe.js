@@ -4,20 +4,28 @@ import descargasWhite from "../public/descargasWhite.png";
 import curriculum from "../download/curriculum.pdf";
 
 export default function AboutMe({ obscure }) {
-  // Paleta controlada por modo
-  const bgCard = obscure ? "bg-white/70" : "bg-slate-900/70";
-  const textBase = obscure ? "text-slate-800" : "text-slate-100";
-  const textMuted = obscure ? "text-slate-600" : "text-slate-300";
+  // ── tokens por modo ─────────────────────────────────────────────────────────
+  const bgCard = obscure ? "bg-white/80" : "bg-slate-900/80";
   const titleColor = obscure ? "text-slate-900" : "text-white";
-  const waveFrom = obscure ? "#3B82F6" : "#5563FF"; // azul
-  const waveTo = obscure ? "#7C3AED" : "#7C8BFF"; // indigo/violeta
+  const textMuted = obscure ? "text-slate-600" : "text-slate-300";
+  const waveFrom = obscure ? "#3B82F6" : "#4f46e5";
+  const waveTo = obscure ? "#7C3AED" : "#7C8BFF";
+  const photoRing = obscure ? "ring-indigo-200" : "ring-indigo-500/30";
+  const badgeCl = obscure
+    ? "bg-indigo-50 border border-indigo-200 text-indigo-700"
+    : "bg-indigo-500/10 border border-indigo-500/25 text-indigo-300";
+  const badgeDot = obscure ? "bg-indigo-500" : "bg-indigo-400";
+  const btnCl = obscure
+    ? "bg-indigo-600 hover:bg-indigo-700 text-white focus-visible:ring-indigo-600"
+    : "bg-indigo-500 hover:bg-indigo-600 text-white focus-visible:ring-indigo-400";
 
   return (
-    <section className="w-full b" id="about">
+    <section className="w-full" id="about">
       <div
-        className={`relative mx-auto mt-10 w-full max-w-6xl rounded-3xl shadow-xl overflow-hidden ${bgCard} backdrop-blur-md max-md:rounded-none max-md:shadow-sm`}
+        className={`relative mx-auto mt-10 w-full max-w-6xl rounded-3xl shadow-xl overflow-hidden
+          ${bgCard} backdrop-blur-md max-md:rounded-none max-md:shadow-sm`}
       >
-        {/* Wave decorativa superior */}
+        {/* ── Wave decorativa ── */}
         <svg
           aria-hidden="true"
           focusable="false"
@@ -34,12 +42,12 @@ export default function AboutMe({ obscure }) {
           <path
             d="M0 0v100c166.7 0 166.7-66 333.3-66S500 77 666.7 77 833.3 28 1000 28V0H0Z"
             fill="url(#waveGrad)"
-            opacity=".35"
+            opacity=".3"
           />
           <path
             d="M0 0v100c166.7 0 166.7-66 333.3-66S500 70 666.7 70 833.3 16 1000 16V0H0Z"
             fill="url(#waveGrad)"
-            opacity=".5"
+            opacity=".45"
           />
           <path
             d="M0 0v100c166.7 0 166.7-66 333.3-66S500 63 666.7 63 833.3 4 1000 4V0H0Z"
@@ -47,49 +55,64 @@ export default function AboutMe({ obscure }) {
           />
         </svg>
 
-        {/* Contenido */}
-        <div className=" relative grid grid-cols-1 md:grid-cols-5 gap-8 p-6 md:p-8 lg:p-10">
-          {/* Imagen */}
-          <div className="md:col-span-2 flex items-center">
-            <div className=" mx-auto w-full max-w-sm rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-lg  ">
+        {/* ── Contenido — padding-top para no solaparse con la wave ── */}
+        <div className="relative grid grid-cols-1 md:grid-cols-5 gap-8 px-6 pt-20 pb-10 md:px-8 md:pt-24 md:pb-10 lg:px-10">
+          {/* Foto */}
+          <div className="md:col-span-2 flex items-stretch">
+            <div
+              className={`w-full rounded-2xl overflow-hidden shadow-2xl ring-2 ${photoRing}`}
+            >
               <Image
                 src={fotoPerfil}
-                alt="Retrato profesional frente a portátil"
-                className="h-auto w-full object-cover"
+                alt="Alejandro Arnedo — Frontend Developer"
+                className="h-full w-full object-cover object-top"
                 priority
               />
             </div>
           </div>
 
           {/* Texto */}
-          <div className="md:col-span-3">
-            <h2 className={`text-2xl md:text-3xl font-extrabold ${titleColor}`}>
-              Who I am
-            </h2>
+          <div className="md:col-span-3 flex flex-col justify-center">
+            {/* Título con línea acento */}
+            <div className="flex items-center gap-3 mb-5">
+              <h2
+                className={`text-2xl md:text-3xl font-extrabold ${titleColor}`}
+                style={{ fontFamily: "inherit", textShadow: "none" }}
+              >
+                Who I am
+              </h2>
+              <div className="h-1 w-8 rounded-full bg-indigo-500 shrink-0" />
+            </div>
 
-            <p className={`mt-4 leading-7 ${textMuted} max-w-prose`}>
-              Frontend Developer specialized in React & Next.js, graduated from
-              the National Technological University. I build fast, accessible,
-              and scalable interfaces — from component architecture to API
-              integration — applying SOLID principles and Clean Architecture in
-              every project. I have worked as a freelancer delivering end-to-end
-              solutions for real clients, using Tailwind CSS, React Query,
-              Socket.IO, and Figma as part of my daily workflow.
-            </p>
+            {/* Copy — historia + diferencial + propuesta de valor */}
+            <div
+              className={`space-y-4 leading-7 text-sm md:text-base ${textMuted} max-w-prose`}
+            >
+              <p>
+                I started coding out of curiosity and ended up building real
+                products for real clients. With a diploma from UTN and 4+ years
+                of self-driven learning, I've gone from vanilla JS to full-stack
+                apps with Next.js, MongoDB, and Socket.IO.
+              </p>
+              <p>
+                What sets me apart isn't just the stack — it's how I work: clean
+                component architecture, consistent communication, and a focus on
+                delivering interfaces that actually perform.
+              </p>
+              <p>
+                Currently open to frontend roles where I can keep growing and
+                ship things that matter.
+              </p>
+            </div>
 
             {/* CTA */}
-            <div className="mt-6  max-lg:mt-6 max-lg:m-auto max-lg:w-max">
+            <div className="mt-7 max-lg:w-max max-lg:mx-auto">
               <a href={curriculum} download>
                 <button
                   type="button"
-                  className={`inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold shadow transition
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
-                    ${
-                      obscure
-                        ? "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600"
-                        : "bg-indigo-500 text-white hover:bg-indigo-600 focus-visible:ring-indigo-400"
-                    }`}
                   aria-label="Download Curriculum Vitae"
+                  className={`inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold shadow
+                    transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${btnCl}`}
                 >
                   Download CV
                   <Image
@@ -102,35 +125,34 @@ export default function AboutMe({ obscure }) {
               </a>
             </div>
 
-            {/* Badges opcionales (toques de credibilidad) */}
-
-            <ul className="mt-5 flex flex-wrap gap-2  max-lg:justify-center ">
-              <li
-                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
-              >
-                +4 years learning & building
-              </li>
-              <li
-                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
-              >
-                React · Next.js · Tailwind
-              </li>
-              <li
-                className={`text-xs px-3 py-1 rounded-full ${obscure ? "bg-blue-50 text-blue-700" : "bg-white/10 text-white/90"}`}
-              >
-                Freelance · Real clients
-              </li>
+            {/* Badges con borde indigo */}
+            <ul className="mt-5 flex flex-wrap gap-2 max-lg:justify-center">
+              {[
+                "+4 years learning & building",
+                "React · Next.js · Tailwind",
+                "Freelance · Real clients",
+              ].map((label) => (
+                <li
+                  key={label}
+                  className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium ${badgeCl}`}
+                >
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full shrink-0 ${badgeDot}`}
+                  />
+                  {label}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Suave “glow” al fondo */}
+        {/* Glow de fondo */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(1200px 300px at 50% -10%, rgba(99,102,241,0.12), transparent 60%)",
+              "radial-gradient(1200px 300px at 50% -10%, rgba(99,102,241,0.1), transparent 60%)",
           }}
         />
       </div>

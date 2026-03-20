@@ -111,7 +111,7 @@ export default function Education({ obscure }) {
   return (
     <section
       id="education"
-      className="fondoAnimado h-auto mt-20 py-24 max-md:mt-16 max-md:py-12 max-md:px-4"
+      className=" h-auto mt-20 py-24 max-md:mt-16 max-md:py-12 max-md:px-4"
     >
       {/* Section header */}
       <header className="mb-12 text-center">

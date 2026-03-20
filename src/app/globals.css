@@ -2,65 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Palette variables ────────────────────────────────────────────────────── */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Acento principal — indigo */
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-light: #eef2ff;
+  --color-accent-muted: rgba(99, 102, 241, 0.12);
+
+  /* Acento secundario — blue */
+  --color-blue: #3b82f6;
+  --color-blue-light: #dbeafe;
+
+  /* Success / available — emerald */
+  --color-success: #10b981;
+  --color-success-light: rgba(16, 185, 129, 0.1);
+
+  /* Superficie dark mode */
+  --surface-dark-1: #0f172a;
+  --surface-dark-2: #1e293b;
+  --surface-dark-3: #334155;
+  --border-dark: rgba(255, 255, 255, 0.08);
+
+  /* Superficie light mode */
+  --surface-light-1: #ffffff;
+  --surface-light-2: #f8faff;
+  --surface-light-3: #f1f5f9;
+  --border-light: #e2e8f0;
+
+  /* Texto dark mode */
+  --text-dark-primary: #f1f5f9;
+  --text-dark-secondary: #94a3b8;
+  --text-dark-muted: #64748b;
+
+  /* Texto light mode */
+  --text-light-primary: #0f172a;
+  --text-light-secondary: #475569;
+  --text-light-muted: #94a3b8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* ─── Base ─────────────────────────────────────────────────────────────────── */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-.about {
-  background-color: #14c74f;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='471' height='471' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%237F3' stroke-width='1' stroke-opacity='0.2'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='-35' y='45' width='65' height='65'/%3E%3Crect x='-30' y='50' width='55' height='55'/%3E%3Crect x='-25' y='55' width='45' height='45'/%3E%3Crect x='-20' y='60' width='35' height='35'/%3E%3Crect x='-15' y='65' width='25' height='25'/%3E%3Crect x='-10' y='70' width='15' height='15'/%3E%3Crect x='-5' y='75' width='5' height='5'/%3E%3Crect width='35' height='35'/%3E%3Crect x='5' y='5' width='25' height='25'/%3E%3Crect x='10' y='10' width='15' height='15'/%3E%3Crect x='15' y='15' width='5' height='5'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='45' y='5' width='65' height='65'/%3E%3Crect x='50' y='10' width='55' height='55'/%3E%3Crect x='55' y='15' width='45' height='45'/%3E%3Crect x='60' y='20' width='35' height='35'/%3E%3Crect x='65' y='25' width='25' height='25'/%3E%3Crect x='70' y='30' width='15' height='15'/%3E%3Crect x='75' y='35' width='5' height='5'/%3E%3Crect x='40' y='80' width='35' height='35'/%3E%3Crect x='45' y='85' width='25' height='25'/%3E%3Crect x='50' y='90' width='15' height='15'/%3E%3Crect x='55' y='95' width='5' height='5'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect x='125' y='-35' width='65' height='65'/%3E%3Crect x='130' y='-30' width='55' height='55'/%3E%3Crect x='135' y='-25' width='45' height='45'/%3E%3Crect x='140' y='-20' width='35' height='35'/%3E%3Crect x='145' y='-15' width='25' height='25'/%3E%3Crect x='150' y='-10' width='15' height='15'/%3E%3Crect x='155' y='-5' width='5' height='5'/%3E%3Crect x='120' y='40' width='35' height='35'/%3E%3Crect x='125' y='45' width='25' height='25'/%3E%3Crect x='130' y='50' width='15' height='15'/%3E%3Crect x='135' y='55' width='5' height='5'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='5' y='125' width='65' height='65'/%3E%3Crect x='10' y='130' width='55' height='55'/%3E%3Crect x='15' y='135' width='45' height='45'/%3E%3Crect x='20' y='140' width='35' height='35'/%3E%3Crect x='25' y='145' width='25' height='25'/%3E%3Crect x='30' y='150' width='15' height='15'/%3E%3Crect x='35' y='155' width='5' height='5'/%3E%3Crect x='200' y='120' width='75' height='75'/%3E%3Crect x='40' y='200' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='85' y='85' width='65' height='65'/%3E%3Crect x='90' y='90' width='55' height='55'/%3E%3Crect x='95' y='95' width='45' height='45'/%3E%3Crect x='100' y='100' width='35' height='35'/%3E%3Crect x='105' y='105' width='25' height='25'/%3E%3Crect x='110' y='110' width='15' height='15'/%3E%3Crect x='115' y='115' width='5' height='5'/%3E%3Crect x='80' y='160' width='35' height='35'/%3E%3Crect x='85' y='165' width='25' height='25'/%3E%3Crect x='90' y='170' width='15' height='15'/%3E%3Crect x='95' y='175' width='5' height='5'/%3E%3Crect x='120' y='160' width='75' height='75'/%3E%3Crect x='125' y='165' width='65' height='65'/%3E%3Crect x='130' y='170' width='55' height='55'/%3E%3Crect x='135' y='175' width='45' height='45'/%3E%3Crect x='140' y='180' width='35' height='35'/%3E%3Crect x='145' y='185' width='25' height='25'/%3E%3Crect x='150' y='190' width='15' height='15'/%3E%3Crect x='155' y='195' width='5' height='5'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3Crect x='165' y='45' width='65' height='65'/%3E%3Crect x='170' y='50' width='55' height='55'/%3E%3Crect x='175' y='55' width='45' height='45'/%3E%3Crect x='180' y='60' width='35' height='35'/%3E%3Crect x='185' y='65' width='25' height='25'/%3E%3Crect x='190' y='70' width='15' height='15'/%3E%3Crect x='195' y='75' width='5' height='5'/%3E%3Crect x='160' y='120' width='35' height='35'/%3E%3Crect x='165' y='125' width='25' height='25'/%3E%3Crect x='170' y='130' width='15' height='15'/%3E%3Crect x='175' y='135' width='5' height='5'/%3E%3Crect x='200' y='200' width='35' height='35'/%3E%3Crect x='200' width='35' height='35'/%3E%3Crect y='200' width='35' height='35'/%3E%3C/g%3E%3C/svg%3E");
-}
-.fondoClaro {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-light-primary);
+  background-color: var(--surface-light-2);
 }
 
+/* Reset del h3 global — evita que Gill Sans sobreescriba los títulos de cards */
 h3 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-shadow: none;
+}
+
+/* Usá esta clase solo donde necesitás el estilo decorativo de sección */
+.section-heading-decorative {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 33px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* ─── Fondos de sección ────────────────────────────────────────────────────── */
+
+/* Modo claro — tinte indigo muy sutil para conectar con el acento del sitio */
+.fondoClaro {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 40%, #f8faff 100%);
+  color: var(--text-light-primary);
+}
+
+/* Modo oscuro — slate consistente con cards y footer */
 .fondoOscuro {
-  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
 }
+
+/* Sección Education — polígonos con paleta slate/indigo en lugar del verde brillante */
+.fondoAnimado {
+  width: 100%;
+  height: auto;
+  background-color: #0f172a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%234f46e5' opacity='0.08' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%234338ca' opacity='0.06' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%236366f1' opacity='0.07' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234f46e5' opacity='0.05' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%233b82f6' opacity='0.06' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232563eb' opacity='0.05' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236366f1' opacity='0.07' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%234f46e5' opacity='0.04' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%233b82f6' opacity='0.06' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%232563eb' opacity='0.05' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%234f46e5' opacity='0.07' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%236366f1' opacity='0.05' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Sección Education fondo alternativo claro */
+.fondo-educacion {
+  background: linear-gradient(120deg, #e0e7ff 0%, #f8faff 60%);
+}
+
+/* ─── Texto utilitario ─────────────────────────────────────────────────────── */
 
 .sombreadoText {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.sombreadoTextWhite {
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Secion de cloude */
+.sombreadoTextWhite {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Project cards ────────────────────────────────────────────────────────── */
 
 .project-card {
   transition:
@@ -70,7 +117,7 @@ h3 {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .project-btn {
@@ -91,17 +138,17 @@ h3 {
 }
 
 .project-btn--primary {
-  background-color: #2563eb;
+  background-color: var(--color-accent);
   color: #ffffff;
-  border-color: #2563eb;
+  border-color: var(--color-accent);
 }
 
 .project-btn--primary:hover {
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
 }
 
-/* ── Featured badge ─────────────────────────────────────────────────────────── */
+/* ─── Featured badge ───────────────────────────────────────────────────────── */
 
 .featured-badge {
   display: inline-flex;
@@ -112,7 +159,7 @@ h3 {
   letter-spacing: 0.03em;
   padding: 4px 10px;
   border-radius: 8px;
-  background-color: #dbeafe;
+  background-color: var(--color-blue-light);
   color: #1d4ed8;
   width: fit-content;
 }
@@ -121,97 +168,42 @@ h3 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #3b82f6;
+  background-color: var(--color-blue);
   flex-shrink: 0;
 }
-/* Secion de cloude */
 
-.contenedor-imagen-modal {
-  width: 30%;
-  margin-top: 25px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-}
-.imagen-modal {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30% 70% 69% 31% / 52% 27% 73% 48%;
-  border: 5px solid rgb(28, 46, 52);
-}
+/* ─── Footer ───────────────────────────────────────────────────────────────── */
 
-.contenedor {
-  position: relative;
-  width: auto;
-  min-height: 540px; /* Altura mínima para uniformidad */
-  height: auto; /* Ajuste dinámico según contenido */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  padding-bottom: 20px;
-}
+/* Reemplaza .footer, .color-footer y .fondoFooter — ya no se usan */
+/* El Footer.jsx usa bg-slate-900 directamente via Tailwind */
 
-.elemento-visible,
-.elemento-no-visible {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: linear opacity 0.1s; /* Transición de opacidad para suavizar el efecto */
-}
+/* ─── Clases legacy — se pueden eliminar cuando refactorices ───────────────── */
 
-.elemento-no-visible {
-  opacity: 0;
-  color: aliceblue;
-}
-.contenedor:hover .elemento-visible {
-  filter: blur(5px);
-}
+/*
+  Las siguientes clases ya no se usan en los componentes refactorizados.
+  Las dejamos comentadas por si algún componente viejo aún las referencia.
+  Podés borrarlas cuando confirmes que no rompan nada:
 
-.contenedor:hover .elemento-no-visible {
-  opacity: 0.8;
-  background: rgb(2, 2, 2);
-  pointer-events: auto; /* Hace que el elemento no visible sea interactivo al hacer hover en el contenedor */
-  transition: none;
-}
+  .about { ... }             → no se usa
+  .contenedor { ... }        → reemplazado por .project-card
+  .elemento-visible { ... }  → eliminado
+  .elemento-no-visible { ... } → eliminado
+  @media .contenedor { height: 680px } → eliminado
+  .color-footer { ... }      → reemplazado por bg-slate-900 en Footer.jsx
+  .fondoFooter { ... }       → reemplazado por bg-slate-900 en Footer.jsx
+  .footer { ... }            → reemplazado por bg-slate-900 en Footer.jsx
+  .splash { ... }            → verificar si se usa
+  .contenedor-imagen-modal { ... } → verificar si se usa
+  .imagen-modal { ... }      → verificar si se usa
+*/
 
-@media screen and (max-width: 767px) {
-  .contenedor {
-    height: 680px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .contenedor {
-    height: 680px;
-  }
-}
-
-.fondoAnimado {
-  width: 100%px;
-  height: auto;
-  /* background-color: #E8E8E8; */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%231ccc0a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2300aa13' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2317c509' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300a319' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2312be09' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23009c1d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230db708' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23029520' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2307b108' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23048f22' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2301aa07' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23078824' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.fondo-educacion {
-  background-image: linear-gradient(
-    120deg,
-    rgb(95, 169, 253) 0%,
-    rgb(255, 255, 255) 60%
-  );
-}
+/* ─── Animations ───────────────────────────────────────────────────────────── */
 
 .typewriter {
-  overflow: hidden; /* Para que las letras no aparezcan antes de tiempo */
-  border-right: 0.15em solid orange; /* Crear el efecto de cursor intermitente */
-  white-space: nowrap; /* Evitar que las palabras se salgan del contenedor */
-  letter-spacing: 0.15em; /* Espaciado entre letras */
+  overflow: hidden;
+  border-right: 0.15em solid var(--color-accent);
+  white-space: nowrap;
+  letter-spacing: 0.15em;
   animation:
     typing 3s steps(40, end),
     blink-caret 0.75s infinite alternate;
@@ -232,36 +224,6 @@ h3 {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--color-accent);
   }
-}
-
-.splash {
-  mix-blend-mode: screen;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-}
-
-.color-footer {
-  background: rgb(5, 184, 5);
-}
-.fondoFooter {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%231ccc0a' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2300aa13' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2317c509' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300a319' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2312be09' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23009c1d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230db708' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23029520' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2307b108' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23048f22' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2301aa07' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23078824' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: static;
-  background-size: cover;
-}
-.color-footer {
-  background: rgb(5, 184, 5);
-}
-
-.footer {
-  background-image: linear-gradient(
-    -225deg,
-    #779c74 0%,
-    #317463 48%,
-    #177e28 100%
-  );
 }
